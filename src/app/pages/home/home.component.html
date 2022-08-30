@@ -1,0 +1,61 @@
+<h4>Registros Cadastrados Cliente</h4>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Nome Completo</th>
+    <th scope="col">CPF</th>
+    <th scope="col">Rua</th>
+    <th scope="col">Número</th>
+    <th scope="col">Cidade</th>
+    <th scope="col">Estado</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let i of dadosCliente">
+    <td>{{ i.nomeCompleto }}</td>
+    <td>{{ i.cpf }}</td>
+    <td>{{ i.rua }}</td>
+    <td>{{ i.numero }}</td>
+    <td>{{ i.cidade }}</td>
+    <td>{{ i.estado }}</td>
+  </tr>
+  </tbody>
+</table>
+
+<br>
+<hr>
+<br>
+
+<h5>Registros Cadastrados Empresa</h5>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Remetente</th>
+    <th scope="col">CNPJ</th>
+    <th scope="col">Rua</th>
+    <th scope="col">Número</th>
+    <th scope="col">Cidade</th>
+    <th scope="col">Estado</th>
+    <th scope="col">Valor do frete</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let i of dadosEmpresa">
+    <td>{{ i.remetente }}</td>
+    <td>{{ i.cnpj }}</td>
+    <td>{{ i.rua }}</td>
+    <td>{{ i.numero }}</td>
+    <td>{{ i.cidade }}</td>
+    <td>{{ i.estado }}</td>
+    <td>{{ i.valorFrete | currency: 'BRL'}}</td>
+  </tr>
+  </tbody>
+</table>
+
+
+
+<router-outlet></router-outlet>
+
+
